@@ -1,0 +1,1 @@
+1. Add option to use in terminal or GUI (Tkinter)

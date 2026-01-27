@@ -10,9 +10,16 @@
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
 import string
 import secrets
+from pathlib import Path
 
-def generatePassphrase(length):
-    pass
+BASE_DIR = Path(__file__).parent
+file_path = BASE_DIR / 'words_alpha.txt'
+
+def generatePassphrase():
+    with open(file_path) as f:
+        words = [word.strip() for word in f]
+        password = ' '.join(secrets.choice(words) for i in range(4))
+    return password
     
 def generateString(length):
     characters = string.ascii_letters + string.digits # + string.punctuation
@@ -26,7 +33,7 @@ def generateString(length):
 
 def generatePassword(length, mode):
     if mode == 1:
-        passphrase = generatePassphrase(length)
+        passphrase = generatePassphrase()
         return passphrase
     elif mode == 2:
         stringPass = generateString(length)

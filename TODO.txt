@@ -7,14 +7,16 @@
 ##############################################################################################################################################
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
-1. Fix length bug in the password Generator | Done
-2. Add an option to go back to the starting menu | Done
-3. Change project name to something shorter | Done
-4. Fix input field for intial choosing option (Answer: ) |
-5. Extend equal sign art by a bit |
-6. Add descriptions | 
-7. Add comments to code | 
-8. Add an option to add symbols to random string option | 
-9. Fix entropy function (asking for password twice) |
-
+- Fix length bug in the password Generator | Done
+- Add an option to go back to the starting menu | Done
+- Change project name to something shorter | Done
+- Fix input field for intial choosing option (Answer: ) | Done
+- Add descriptions | 
+- Add comments to code | 
+- Add an option to add symbols to random string option | 
+- Fix entropy function (asking for password twice) | Done
+- Add error exceptions | 
+- Give user option to save a password to a File | 
+- Extend password checker to account for known password words | 
+- Ask users for their first and last name to strengthen checker |
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #

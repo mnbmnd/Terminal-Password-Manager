@@ -15,7 +15,7 @@ def optionMenu():
     print("1. Generate a new password")
     print("2. Check password strength")
     print("3. Quit")
-    option = int(input())
+    option = int(input("Answer: "))
     if option == 1:
         passwordGeneratorMenu()
     elif option == 2:
@@ -59,7 +59,7 @@ def displayGeneratedPassword(mode):
     
 def passwordCheckerMenu():
     print()
-    print("=======================================================")
+    print("=" * 18)
     print("Password Strength Checker")
     print("Details...")
     print()
@@ -69,7 +69,7 @@ def passwordCheckerMenu():
 
 def passwordGeneratorMenu():
     print("")
-    print("=======================================================")
+    print("=" * 18)
     print("Password Generator")
     print("Please answer the questions below to generate a password")
     print()
@@ -85,17 +85,29 @@ def passwordGeneratorMenu():
     displayGeneratedPassword(passwordMode())
     print()
     optionMenu()
-        
+
+def section(title: str):
+    print()
+    print(f"[ {title} ]")
+
 def displayMenu():
-    # Change up this design (maybe change project name)
-    print("=======================================================")
-    print("=======================================================")
+    print()
     print(r"┏━┓┏━┓┏━┓┏━┓╻ ╻┏━┓┏━┓╺┳┓   ┏━╸┏━╸┏┓╻┏━╸┏━┓┏━┓╺┳╸┏━┓┏━┓")
     print(r"┣━┛┣━┫┗━┓┗━┓┃╻┃┃ ┃┣┳┛ ┃┃   ┃╺┓┣╸ ┃┗┫┣╸ ┣┳┛┣━┫ ┃ ┃ ┃┣┳┛")
     print(r"╹  ╹ ╹┗━┛┗━┛┗┻┛┗━┛╹┗╸╺┻┛   ┗━┛┗━╸╹ ╹┗━╸╹┗╸╹ ╹ ╹ ┗━┛╹┗╸")
-    print("=======================================================")
-    print("=======================================================")
-    print("Text that describes what this does...")
+    print()
+    section("Overview")
+    print(
+        "This project is a terminal-based password utility that helps \n"
+    "you both generate strong passwords and evaluate existing ones, \n"
+    "it is designed to be simple to use, transparent in how it works, \n"
+    "and focused on real-world security rather than gimmicks. \n"
+        )
+    print("To get started, run the program in your terminal and \n"
+          "choose between generating a new password or checking the strength \n"
+          "of an existing one. Each mode is interactive and guides \n"
+          "you through the available options."
+          )
     print()
     optionMenu()
 

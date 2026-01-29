@@ -12,20 +12,19 @@ import password_generator
 
 def optionMenu():
     print("Choose an option to continue:")
-    print("1. Check your password strength")
-    print("2. Generate a new random password")
+    print("1. Generate a new password")
+    print("2. Check password strength")
     print("3. Quit")
     option = int(input())
     if option == 1:
-        passwordCheckerMenu()
-    elif option == 2:
         passwordGeneratorMenu()
+    elif option == 2:
+        passwordCheckerMenu()
     else:
-        print("Have a wonderful day 😄")
+        print("Have a wonderful day 👋")
 
 def getUserPassword():
-    if userPassword == None:
-        userPassword = input("Please enter your password: ")
+    userPassword = input("Please enter your password: ")
     return userPassword
 
 def passwordMode():
@@ -37,13 +36,13 @@ def generateNewPassword(mode):
     return generatedPassword
 
 def displayPasswordEntropy(generatedPassword = None):
-    if generateNewPassword == None:
+    if generatedPassword == None:
         print("Entropy: {:.1f}".format(entropy.getEntropy(getUserPassword())))
     else:
         print("Entropy: {:.1f}".format(entropy.getEntropy(generatedPassword)))
     
 def displayTimeToCrack(generatedPassword = None):
-    if generateNewPassword == None:
+    if generatedPassword == None:
         print("Time to crack (in years): {:.1f}".format(entropy.getTimeToCrack(getUserPassword())))
     else:
         print("Time to crack (in years): {:.1f}".format(entropy.getTimeToCrack(generatedPassword)))
@@ -59,16 +58,19 @@ def displayGeneratedPassword(mode):
     displayPasswordEntropy(generatedPassword)
     
 def passwordCheckerMenu():
-    print("Password Strength Checker 📊")
+    print()
+    print("=======================================================")
+    print("Password Strength Checker")
     print("Details...")
     print()
-    # displayPasswordEntropy()
     print()
     displayTimeToCrack()
+    displayPasswordEntropy()
 
 def passwordGeneratorMenu():
     print("")
-    print("Password Generator 🔒")
+    print("=======================================================")
+    print("Password Generator")
     print("Please answer the questions below to generate a password")
     print()
     print("What kind of password you would like? (Enter '1' or '2')")
@@ -93,7 +95,6 @@ def displayMenu():
     print(r"╹  ╹ ╹┗━┛┗━┛┗┻┛┗━┛╹┗╸╺┻┛   ┗━┛┗━╸╹ ╹┗━╸╹┗╸╹ ╹ ╹ ┗━┛╹┗╸")
     print("=======================================================")
     print("=======================================================")
-    print("Welcome to Password Strength Checker and Generator! 👋")
     print("Text that describes what this does...")
     print()
     optionMenu()

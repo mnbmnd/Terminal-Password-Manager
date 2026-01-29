@@ -18,7 +18,11 @@
 import entropy
 import password_generator
 
-def userOption():
+def optionMenu():
+    print("Choose an option to continue:")
+    print("1. Check your password strength")
+    print("2. Generate a new random password")
+    print("3. Quit")
     option = int(input())
     if option == 1:
         passwordCheckerMenu()
@@ -86,10 +90,7 @@ def passwordGeneratorMenu():
     # TODO: Add a 3rd option as 3. Random String (Alphanumeric + Symbols)
     displayGeneratedPassword(passwordMode())
     print()
-    print("Select an option to continue:")
-    print("1. Generate a new password")
-    print("2. Quit")
-    
+    optionMenu()
         
 def displayMenu():
     # Change up this design (maybe change project name)
@@ -104,12 +105,7 @@ def displayMenu():
     print("Welcome to Password Strength Checker and Generator! 👋")
     print("Text that describes what this does...")
     print()
-    print("Choose an option to continue:")
-    print("1. Check your password strength")
-    print("2. Generate a new random password")
-    print("3. Quit")
-    print()
-    userOption()
+    optionMenu()
 
 if __name__ == "__main__":
     displayMenu()

@@ -1,4 +1,4 @@
-# Terminal Password Generator
+# Terminal Password Manager
 
 ##### References
 https://auth0.com/blog/creating-great-passwords/

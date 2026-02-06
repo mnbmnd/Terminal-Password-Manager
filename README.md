@@ -1,9 +1,9 @@
 # Terminal Password Manager
-
-##### References
+___
+#### References
 https://auth0.com/blog/creating-great-passwords/
 https://auth0.com/blog/defending-against-password-cracking-understanding-the-math/#How-to-Calculate-the-Sample-Space-of-Your-Password-
 https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
 
-curses
+##### curses
 https://docs.python.org/3/howto/curses.html

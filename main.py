@@ -1,6 +1,6 @@
 ##############################################################################################################################################
 # Author: Muneeb Mennad                                                                                                                      #
-# Project Name: Terminal Password Generator                                                                                                  #
+# Project Name: Terminal Password Manager                                                                                                    #
 # File Name: main.py                                                                                                                         #
 # Project Start: 2026-01-24                                                                                                                  #
 # Github Username: mnbmnd                                                                                                                    #
@@ -10,11 +10,11 @@
 import entropy
 import password_generator
 import getpass
-import os
+import subprocess
 
 
 def clear():
-    os.system("cls" if os.name == "nt" else "clear")
+    subprocess.run(["clear"])
 
 
 def optionMenu():
@@ -33,16 +33,6 @@ def optionMenu():
 def getUserPassword():
     userPassword = getpass.getpass("Enter your password to continue: ")
     return userPassword
-
-
-# def revealPassword(userPassword):
-#     print('Press "Y" to show password')
-#     reveal = input()
-#     if reveal.upper() == "Y":
-#         print(userPassword)
-#     else:
-#         print("Nothing to show")
-#     print()
 
 
 def passwordType():
@@ -181,4 +171,3 @@ if __name__ == "__main__":
 
 # end main
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
-

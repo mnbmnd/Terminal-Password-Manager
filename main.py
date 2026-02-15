@@ -92,7 +92,14 @@ def quit_confirm(state):
         elif state == 2:
             system.clear_screen()
             main_menu()
-    
+
+def setup_menu():
+    print("=" * 80)
+    section("Setup")
+    print("To get started, set up your master password")
+    masterCredentials = create_master_credentials()
+    store_master_credentials(masterCredentials)
+
 # The login menu
 def login_menu():
     print("=" * 80)
@@ -101,29 +108,8 @@ def login_menu():
     success = authentication.authenticate(loginPassword)
     if success:
         print("Login Successful")
-    else:
-        print("Login Unsuccessful")
-    return
-
-# The first option menu presented (credentials menu)
-def credentials_menu():
-    print("=" * 80)
-    section("Credentials Menu")
-    print("To get started, choose an option below:\n")
-    print("1. Setup/update your master password")
-    print("2. Login with your master password")
-    print("3. Quit")
-    
-    option = int(input("Answer: "))
-    
-    if option == 1:
-        masterCredentials = create_master_credentials()
-        store_master_credentials(masterCredentials)
-    elif option == 2:
-        system.clear_screen()
-        login_menu()
-    elif option == 3:
-        quit_confirm(1)
+        return True
+    return False
 
 # The second option menu presented
 def main_menu():
@@ -227,13 +213,15 @@ def overview():
     print()
     
 def run_program(quit_confirmation):
-    overview()
-    credentials_menu()
     main_menu()
 
 # Main
 if __name__ == "__main__":
     splash()
+    overview()
+    if not authentication.has_master_credentials():
+        setup_menu()
+    login_menu()
     run_program(quit_confirmation = None)
     
 # END_MAIN

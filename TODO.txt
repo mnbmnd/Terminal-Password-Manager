@@ -17,7 +17,6 @@
 - Fix entropy function (asking for password twice) | Done
 - Add error exceptions | 
 - Give user option to save a password to a File | 
-- Extend password checker to account for known password words | 
-- Extend project to work directly with the shell | 
+- Extend project to work directly with the shell | Done
 - Extend project to work with GUI | 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #

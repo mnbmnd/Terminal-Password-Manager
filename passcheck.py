@@ -1,7 +1,7 @@
 #######################################################################################
 # Author: Muneeb Mennad                                                              # 
 # Project Name: Passman                                                             #  
-# File Name: entropy.py                                                            #   
+# File Name: passcheck.py                                                          #   
 # Project Start: 2026-01-24                                                         #  
 # Github: https://github.com/mnbmnd                                                  # 
 #######################################################################################

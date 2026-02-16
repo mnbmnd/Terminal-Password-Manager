@@ -37,7 +37,8 @@ def section_cutter():
 def overview():
     section("Overview")
     print("\nWelcome to Passman 👋")
-    print("└► A simple to use terminal-based password utility that securely manages your passwords\n")
+    print("└► A simple to use terminal-based password utility that securely "
+          "manages your passwords\n")
     print("Features")
     print("- Secure password generation")
     print("- Accurate password entropy indicator")
@@ -46,9 +47,15 @@ def overview():
 
 def setup_menu():
     section("Setup")
-    print("\nTo get started, set up your master password\n")
-    masterCredentials = authentication.create_master_credentials()
+    print("\nTo get started, set up your master password which you will use "
+          "to login to Passman\n")
+    
+    masterCredentials = authentication.set_master_credentials()
     authentication.store_master_credentials(masterCredentials)
+    
+    section_cutter()
+    input("Press enter to continue to login screen...")
+    system.clear_screen()
 
 
 def login_menu():

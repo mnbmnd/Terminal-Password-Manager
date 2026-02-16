@@ -1,7 +1,7 @@
 #######################################################################################
 # Author: Muneeb Mennad                                                              # 
 # Project Name: Passman                                                             #  
-# File Name: password_generator.py                                                 #   
+# File Name: passgen.py                                                            #   
 # Project Start: 2026-01-24                                                         #  
 # Github: https://github.com/mnbmnd                                                  # 
 #######################################################################################

@@ -25,13 +25,6 @@ def has_master_credentials():
         return False
 
 
-# Sets the master password
-def create_master_credentials():
-    masterCredentials = set_master_credentials()
-
-    return masterCredentials
-
-
 # Stores the master's username, password salt, and password hash
 def store_master_credentials(masterCredentials):
     storage.save_master_credentials(
@@ -71,14 +64,10 @@ def set_master_credentials():
         passwordConfirm = getpass.getpass(prompt="Confirm password\n")
 
         if password == passwordConfirm:
-            print("Setup completed successfully!\n")
+            print("\033[1mSetup complete\033[0m")
             matching = True
         else:
-            print("Your passwords do not match!")
-            print("Try again\n")
-
-    input("Press enter to continue to login screen..")
-    system.clear_screen()
+            print("Your passwords do not match, try again!\n")
 
     salt = encrypt.generate_salt()
     passwordHash = encrypt.generate_hash(password, salt)

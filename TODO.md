@@ -7,7 +7,8 @@
 ___
 ## Current
 - [ ] Fix logging in logic
- - [ ] Fix quitting logic
+- [ ] Fix quitting logic
+- [ ] Work on implementing this with vim keys or other keybinds
 
 ## Hand-off
 - [ ] Update README.md

@@ -42,8 +42,13 @@ def login_menu():
     loginPassword = authentication.get_user_password()
     success = authentication.authenticate(loginPassword)
 
-    while not success:
-        pass
+    while (not success) and (attemptsRemaining > 0):
+        print()
+        print("Incorrect attempt!")
+        print(f"You have {attemptsRemaining} attempts remaning")
+        print()
+        loginPassword = authentication.get_user_password()
+        attemptsRemaining -= 1
 
 # The second option menu presented
 def main_menu():

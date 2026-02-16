@@ -1,4 +1,5 @@
-# Terminal Password Manager
+# Passman
+This is still a WIP
 ___
 #### References
 https://auth0.com/blog/creating-great-passwords/

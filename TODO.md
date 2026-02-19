@@ -6,7 +6,7 @@
 **Github Profile**: https://github.com/mnbmnd/
 ___
 ## Current
-- [ ] Add error checking (trys and excepts etc.)
+
 
 ## Hand-off
 - [ ] Add "settings" to main menu
@@ -19,6 +19,11 @@ ___
 - [ ] Rename prompt to something shorter, maybe psm
 - [ ] Implement password vault storage (`passwords.json`)
 - [ ] Add fuzzy matching for `passman <site>` CLI
+- [ ] Add feature where users can do something like passman setpass `some site` 
+- [ ] Instead of having passcheck and passgen, add them as prompts:
+    - something like passman passcheck would start the checker
+    - or something like passman passgen would start the generator
+    - this way, users don't have to enter passman everytime they want to do something
 - [ ] Add clipboard support
 - [ ] Work on implementing this with vim keys or other keybinds
 - [ ] Add TUI (full scale)
@@ -42,5 +47,6 @@ ___
 - [x] Rewrite the overview section
 - [x] Add (improve) menu for passgen and passcheck
 - [x] Clean up code (Functions, comments, PEP-8, etc.)
+- [x] Add error checking (trys and excepts etc.)
 
 ###### END_FILE  

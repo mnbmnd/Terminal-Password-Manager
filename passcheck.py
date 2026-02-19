@@ -21,11 +21,11 @@ GUESSES_PER_SEC = 1e5
 SECONDS_PER_YEAR = 6.308 * (10**7)
 
 # Ranges of strength based on password entropy bits
-VERY_WEAK_ENTROPY = 28 # 0=<28
-WEAK_ENTROPY = 36 # 28=<36
-MEDIUM_ENTROPY = 60 # 36=<60
-STRONG_ENTROPY = 128 # 60=<128
-VERY_STRONG_ENTROPY = float("inf") # >=128
+VERY_WEAK_ENTROPY = 28  # 0=<28
+WEAK_ENTROPY = 36  # 28=<36
+MEDIUM_ENTROPY = 60  # 36=<60
+STRONG_ENTROPY = 128  # 60=<128
+VERY_STRONG_ENTROPY = float("inf")  # >=128
 
 
 def get_uppercase_count(password):

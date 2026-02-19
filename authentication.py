@@ -59,7 +59,7 @@ def get_master_credentials():
     except FileNotFoundError:
         print("File not found")
     except json.JSONDecodeError:
-        print("File corrupted")        
+        print("File corrupted")
     return None
 
 

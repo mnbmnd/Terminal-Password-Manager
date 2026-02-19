@@ -18,18 +18,18 @@ def run_program():
     # Program goes to login if user credentials are already setup
     if not authentication.has_master_credentials():
         menus.show_setup_menu()
-        
+
     loginSuccessful = menus.show_login_menu()
-    
+
     if loginSuccessful:
         print("\nWelcome,\033[1m", system.whoami(), "\033[0m")
         menus.section_cutter()
         input("Press enter to continue to main menu... ")
-        
+
         while True:
             system.clear_screen()
             mainMenuChoice = menus.show_main_menu()
-            
+
             if mainMenuChoice == 1:
                 system.clear_screen()
                 menus.show_passgen_menu()

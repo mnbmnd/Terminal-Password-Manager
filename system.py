@@ -17,7 +17,7 @@ def clear_screen():
 # Quits program and clears the screen
 def reset():
     subprocess.run(["reset"])
-    
+
 
 # Gets system username
 def whoami():
